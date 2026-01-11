@@ -1,0 +1,129 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url('images copy/window.jpg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    font-family: helvetica, sans-serif;
+    text-align:center;
+}
+.container{
+    background: rgba(255, 255, 255, 0.95);
+    position: fixed;
+    top: 47%;
+    left: 49%;
+    transform: translate(-50%, -50%);
+    width:960px;
+    height: 540px;
+    overflow: hidden;
+    z-index: 10;
+    margin:0 auto;
+    margin-top: 50px;
+    justify-content: center;
+}
+img {
+    max-width:960px;
+    overflow: hidden;
+
+}
+nav {
+    margin-top: 50px;
+}
+ul{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 0; 
+    list-style: none;
+}
+nav li{
+    list-style-type: none;
+    flex: none;
+}
+nav a{
+    padding: 10px 20px;
+    background: #0000a8;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+nav a:hover{
+    background: #0056b3;
+    color: white;
+    transform: translateY(-2px);
+}
+.disable{
+    color:dimgrey;
+}
+
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+.popup-content {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 350px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    animation: popupSlideIn 0.3s ease-out;
+}
+.popup-btn {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.popup-btn:hover {
+    background: #0056b3;
+}
+
+.feedback {
+    display: none;                    
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 10px;
+    font-weight: bold;
+    text-align: center;
+    border: 3px solid;
+    animation: fadeIn 0.5s ease-in;   
+}
+
+.feedback.green {
+    background: #d4edda;
+    border-color: #28a745;
+    color: #155724;
+}
+
+.feedback.red {
+    background: #f8d7da;
+    border-color: #dc3545;
+    color: #721c24;
+}
+
+.feedback.orange {
+    background: #fff3cd;
+    border-color: #ffc107;
+    color: #856404;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

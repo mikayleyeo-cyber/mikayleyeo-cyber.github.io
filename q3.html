@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>skymentor21 has sent you a message</title>
+        <link href="style.css" rel="stylesheet">
+
+    </head>
+    <body>
+        <div class="container">
+            <img src="images copy/q3.jpg">
+            <h3>How will you reply?</h3>
+
+            <!-- buttons -->
+            <nav>
+            <ul>
+                <li><a href="#" onclick="showFeedback('⚠️ RISKY! This does not put a stop to the situation and just leaves the conversation open.', 'orange',  'q3n.html')">Don't reply</a></li>
+                <li> <a href="#" onclick="showFeedback('❌ DANGER! Fraternizing with the stranger shows you are open to conversation.', 'red', 'q3n.html')">Haha thanks. Do I know you from somewhere?</a> </li>
+                <li> <a href="#" onclick="showFeedback('✅ SAFE CHOICE! Stop the trouble before it begins.', 'green',  'q3y.html')">Report and block them</a> </li>
+            </ul>
+            </nav>
+            <div id="feedback" class="feedback"></div>
+        </div>
+        
+        <script>
+        function showFeedback(message, color, nextPage) {
+            const feedback = document.getElementById('feedback');
+            feedback.textContent = message;
+            feedback.className = `feedback ${color}`;
+            feedback.style.display = 'block';
+            feedback.scrollIntoView({ behavior: 'smooth' });
+    // Delay navigation by 2 seconds so they read feedback
+    setTimeout(() => {
+        if (nextPage) {
+            window.location.href = nextPage;
+        }
+    }, 2000);
+    }
+    </script>
+
+    </body>
+</html>

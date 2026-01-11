@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>skymentor21 has sent you a message</title>
+        <link href="style.css" rel="stylesheet">
+
+    </head>
+    <body>
+        <div class="container">
+            <h3>It's important to practice internet safety by knowing how to deal with unsolicited messages. Remember to be careful of people claiming to be someone you already know in real life, and be sure to double check their identity before sharing any personal information.</h3>
+
+            <!-- buttons -->
+            <nav>
+            <ul>
+                <li> <a href="#" onclick="showFeedback('Thank you for joining us on this journey! Hope you learned something new.', 'green',  'q3y.html')">Yep! Now I understand!</a> </li>
+            </ul>
+            </nav>
+            <div id="feedback" class="feedback"></div>
+        </div>
+        
+        <script>
+        function showFeedback(message, color, nextPage) {
+            const feedback = document.getElementById('feedback');
+            feedback.textContent = message;
+            feedback.className = `feedback ${color}`;
+            feedback.style.display = 'block';
+            feedback.scrollIntoView({ behavior: 'smooth' });
+    // Delay navigation by 2 seconds so they read feedback
+    setTimeout(() => {
+        if (nextPage) {
+            window.location.href = nextPage;
+        }
+    }, 5000);
+    }
+    </script>
+
+    </body>
+</html>
